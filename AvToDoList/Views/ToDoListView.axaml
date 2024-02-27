@@ -4,5 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="250" d:DesignHeight="450"
              x:Class="AvToDoList.Views.ToDoListView">
-    Welcome to Avalonia!
+    <DockPanel>
+        <Button DockPanel.Dock="Bottom"
+                HorizontalAlignment="Stretch"
+                HorizontalContentAlignment="Center">
+            Add Item
+        </Button>
+    </DockPanel>
 </UserControl>
