@@ -10,5 +10,9 @@
                 HorizontalContentAlignment="Center">
             Add Item
         </Button>
+        <StackPanel>
+            <CheckBox Margin="4">Walk the milk</CheckBox>
+            <CheckBox Margin="4">Buy some cat</CheckBox>
+        </StackPanel>
     </DockPanel>
 </UserControl>
