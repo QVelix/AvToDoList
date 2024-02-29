@@ -10,9 +10,14 @@
                 HorizontalContentAlignment="Center">
             Add Item
         </Button>
-        <StackPanel>
-            <CheckBox Margin="4">Walk the milk</CheckBox>
-            <CheckBox Margin="4">Buy some cat</CheckBox>
-        </StackPanel>
+        <ItemsControl ItemsSource="{Binding ListItems}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <CheckBox Margin="4"
+                              IsChecked="{Binding IsChecked}" 
+                              Content="{Binding Description}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </DockPanel>
 </UserControl>
