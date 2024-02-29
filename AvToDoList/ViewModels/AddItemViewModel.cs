@@ -1,6 +1,14 @@
-﻿namespace AvToDoList.ViewModels;
+﻿using System;
 
-public class AddItemViewModel
+namespace AvToDoList.ViewModels;
+
+public class AddItemViewModel : ViewModelBase
 {
-	
+	private string _description = String.Empty;
+
+	public string Description
+	{
+		get { return _description; }
+		set { _description = value; }
+	}
 }
