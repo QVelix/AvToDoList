@@ -16,5 +16,17 @@ public class AddItemViewModel : ViewModelBase
 	}
 	public ReactiveCommand<Unit, ToDoItem> OkCommand { get; }
 	public ReactiveCommand<Unit, Unit> CancelCommand { get; }
-	
+
+	public AddItemViewModel()
+	{
+		var isValidObservable = this.WhenAnyValue(
+			x => x.Description,
+			x => !String.IsNullOrWhiteSpace(x)
+		);
+
+		OkCommand = ReactiveCommand.Create(
+			() => new ToDoItem { Description = Description }, isValidObservable
+		);
+		CancelCommand = ReactiveCommand.Create(() => { });
+	}
 }
